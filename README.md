@@ -11,7 +11,7 @@ https://ft.unri.ac.id/id merupakan website resmi FT UNRI yang juga sebagai pusat
 
 ## Authors
 
-- [@aleaprilian](https://github.com/aleeaprilian)  
+- [@aleaprilian](https://github.com/aleaprilian)  
 - [@nasywadeethia](https://github.com/nasywadeethia)
 - [@rmuhammadvarelap](https://github.com/rmuhammadvarelap)
 
