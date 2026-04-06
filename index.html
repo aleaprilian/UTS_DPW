@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pangkat Golongan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    
+    <style>
+      body,html{
+        height: 100%;margin: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+      .wrapper{
+        min-height: 100vh; display: flex; flex-direction: column;
+      }
+
+      .main-wrapper{
+        display: flex;
+        flex:1;
+        overflow: hidden;
+        min-height: 90vh;
+      }
+
+      .navbar{
+        height: 10vh;
+        background: #A61f17; 
+        color: white;
+        border-bottom: 2px solid #801812;
+      }
+
+      .navbar .nav-link {
+          color: white !important;
+      }
+
+      .navbar .nav-link:hover {
+          color: rgba(255, 255, 255, 0.8) !important;
+      }
+      .sidebar{
+        width: 280px;
+        background-color:  white; 
+        color: black;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-color: #A61f17;
+        border-right: 60px;
+        
+      }
+      .content-area{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        overflow-y: auto;
+      }
+     
+      .primary-nav{
+        flex: 1 !important; 
+      }
+
+      .mt-auto{
+        margin-top: auto !important; 
+      }
+      
+      .nav-item{
+        font-size: 18px;
+      }
+
+      .dropdown-menu {
+          padding: 0; 
+          border-radius: 4px;
+          overflow: hidden;
+      }
+
+      .dropdown-item {
+          padding: 10px 20px; 
+          border-bottom: 1px solid #dee2e6; 
+          font-size: 14px;
+          color: #666;
+      }
+
+      .dropdown-item:last-child {
+          border-bottom: none;
+      }
+
+
+      .dropdown-item:hover {
+          background-color: #f8f9fa;
+          color: #A61f17;
+      }
+
+    
+      .sidebar .nav-link {
+          color: black; 
+          border-radius: 8px;        
+          margin-bottom: 5px;
+          padding: 12px 15px;
+          font-weight: 500;
+          font-size: 14px;
+      }
+
+      .sidebar .nav-link:hover {
+          background-color: rgba(108, 103, 103, 0.2); 
+                  
+      }
+
+      .sidebar .nav-link.active{
+        background-color: #A61f17;
+        color: white;
+      }
+
+     
+  
+    </style>
+</head> 
+<body>
+   <div class="wrapper">
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center">
+            
+            <img src="img/logo.png" height="35px" alt="unri">
+          </div>
+
+          <button class="navbar-toggler text-white border-white d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <ul class="nav ms-auto d-none d-lg-flex">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profil
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sejarah</a></li>
+                  <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+                  <li><a class="dropdown-item" href="#">Visi Misi</a></li>
+                  <li><a class="dropdown-item" href="#">Tujuan</a></li>
+                  <li><a class="dropdown-item" href="#">Pimpinan</a></li>
+                  <li><a class="dropdown-item" href="#">Sambutan Dekan</a  ></li>
+                  <li><a class="dropdown-item" href="#">Akreditasi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Akademik
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Kalender Akademik</a></li>
+                  <li><a class="dropdown-item" href="#">Peraturan Terkait</a></li>
+                  <li><a class="dropdown-item" href="#">Pedoman Akademik</a></li>
+                  <li><a class="dropdown-item" href="#">SOP Akademik</a></li>
+                  <li><a class="dropdown-item" href="#">Jurusan Teknik Mesin</a></li>
+                  <li><a class="dropdown-item" href="#">Jurusan Teknik Elektro</a></li>
+                  <li><a class="dropdown-item" href="#">Arsitektur</a></li>
+                  <li><a class="dropdown-item" href="#">Jurusan Teknik Sipil</a></li>
+                  <li><a class="dropdown-item" href="#">Jurusan Teknik Kimia</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SDM</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  PPID
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Profil Singkat</a></li>
+                  <li><a class="dropdown-item" href="#">Gambaran Umum</a></li>
+                  <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+                  <li><a class="dropdown-item" href="#">Surat Keputusan</a></li>
+                  <li><a class="dropdown-item" href="#">Tugas dan Tanggung Jawab</a></li>
+                  <li><a class="dropdown-item" href="#">Visi Misi</a></li>
+                  <li><a class="dropdown-item" href="#">SOP PPID</a></li>
+                  <li><a class="dropdown-item" href="#">Layanan Terkait</a></li>
+                  <li><a class="dropdown-item" href="#">Layanan Informasi</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Wajib Berkala</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Tersedia Setiap Saat</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Publik Online</a></li>
+                  <li><a class="dropdown-item" href="#">Formulir Permohonan dan Keberatan</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">K3L</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kerjasama</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+
+      <div class="main-wrapper">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profil
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sejarah</a></li>
+                  <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+                  <li><a class="dropdown-item" href="#">Visi Misi</a></li>
+                  <li><a class="dropdown-item" href="#">Tujuan</a></li>
+                  <li><a class="dropdown-item" href="#">Pimpinan</a></li>
+                  <li><a class="dropdown-item" href="#">Sambutan Dekan</a  ></li>
+                  <li><a class="dropdown-item" href="#">Akreditasi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Akademik
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Kalender Akademik</a></li>
+                  <li><a class="dropdown-item" href="#">Peraturan Terkait</a></li>
+                  <li><a class="dropdown-item" href="#">Pedoman Akademik</a></li>
+                  <li><a class="dropdown-item" href="#">SOP Akademik</a></li>
+                  <li><a class="dropdown-item" href="#">Jurusan Teknik Mesin</a></li>
+                  <li><a class="dropdown-item" href="#">Jurusan Teknik Elektro</a></li>
+                  <li><a class="dropdown-item" href="#">Arsitektur</a></li>
+                  <li><a class="dropdown-item" href="#">Jurusan Teknik Sipil</a></li>
+                  <li><a class="dropdown-item" href="#">Jurusan Teknik Kimia</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SDM</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  PPID
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Profil Singkat</a></li>
+                  <li><a class="dropdown-item" href="#">Gambaran Umum</a></li>
+                  <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+                  <li><a class="dropdown-item" href="#">Surat Keputusan</a></li>
+                  <li><a class="dropdown-item" href="#">Tugas dan Tanggung Jawab</a></li>
+                  <li><a class="dropdown-item" href="#">Visi Misi</a></li>
+                  <li><a class="dropdown-item" href="#">SOP PPID</a></li>
+                  <li><a class="dropdown-item" href="#">Layanan Terkait</a></li>
+                  <li><a class="dropdown-item" href="#">Layanan Informasi</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Wajib Berkala</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Tersedia Setiap Saat</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Publik Online</a></li>
+                  <li><a class="dropdown-item" href="#">Formulir Permohonan dan Keberatan</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">K3L</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kerjasama</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <main class="content-area bg-light">
+
+                                                  
+  
+        </main>
+      </div>
+        <footer class="mt-auto py-4 border-top px-4" style="background-color: #A61f17; min-height: 200px; width: 100%; color: white;">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-md-4 mb-3">
+                      <img src="img/logo.png" alt="" style="height: 40px;" class="mb-2">
+                      <p class="small">Fakultas Teknik, Kampus Binawidya, JL. HR Soebrantas KM.12.5, Simpang Baru, Panam</p>
+                  </div>
+
+                  <div class="col-md-4 mb-3">
+                      <ul class="list-unstyled">
+                          <li><i class="bi bi-instagram me-2"></i>Instagram</li>
+                          <li><i class="bi bi-facebook me-2"></i>Facebook</li>
+                          <li><i class="bi bi-twitter-x me-2"></i>Twitter</li>
+                      </ul> 
+                  </div>
+              </div> 
+              <hr>
+              <p class="text-center mb-0 small">© 2026 Fakultas Teknik UNRI</p>
+          </div> 
+        </footer>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.getElementById('btnLogout').addEventListener('click',function(){
+        Swal.fire({
+          title: "Apakah anda yakin?",
+          text: "Anda akan kembali ke halaman login!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Ya,Logout!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Logut!",
+              text: "Anda telah logout",
+              icon: "success"
+            });
+            setTimeout(() =>{
+            window.location.href = 'login.html';
+          },1500)
+          }
+        });
+      })
+      
+    </script>
+    <script src="file.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
