@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pangkat Golongan - FT UNRI</title>
+    <title>FAKULTAS TEKNIK</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,7 +86,8 @@
       /* ABOUT BANNER */
       .about-banner { border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1fr; background: var(--primary); box-shadow: 0 8px 40px rgba(166, 31, 23, 0.18); margin: 40px 0; color: white; }
       @media(min-width: 768px){ .about-banner { grid-template-columns: 1fr 1fr; } }
-      .about-banner-img { min-height: 300px; background: linear-gradient(to right, transparent 60%, var(--primary)), var(--primary-dark); display: flex; align-items: center; justify-content: center; font-size: 80px; }
+      .about-banner-img { min-height: 300px; background: linear-gradient(to right, transparent 50%, var(--primary) 95%), 
+              url('img/ft-gedung-banner.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; font-size: 80px; }
       .about-banner-content { padding: 40px; }
 
       /* ACHIEVEMENTS */
@@ -100,6 +101,17 @@
       .service-card:hover { border-color: var(--primary); box-shadow: 0 4px 20px rgba(166, 31, 23, 0.1); }
       .service-icon { width: 32px; height: 32px; margin-bottom: 10px; }
 
+      .custom-card-img{
+        width:100%;
+        height:160px;
+        object-fit:cover;
+      }
+      .achieve-card-img img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position: 50% 20%; 
+      }
       .footer{
         background: radial-gradient(circle at left, #991b1b, #111827 70%);
         padding:80px 0 30px;
@@ -216,8 +228,18 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">PPID</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Profil Singkat</a></li>
+                  <li><a class="dropdown-item" href="#">Gambaran Umum</a></li>
+                  <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+                  <li><a class="dropdown-item" href="#">Surat Keputusan</a></li>
+                  <li><a class="dropdown-item" href="#">Tugas dan Tanggung Jawab</a></li>
+                  <li><a class="dropdown-item" href="#">Visi Misi</a></li>
                   <li><a class="dropdown-item" href="#">SOP PPID</a></li>
                   <li><a class="dropdown-item" href="#">Layanan Terkait</a></li>
+                  <li><a class="dropdown-item" href="#">Layanan Informasi</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Wajib Berkala</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Tersedia Setiap Saat</a></li>
+                  <li><a class="dropdown-item" href="#">Informasi Publik Online</a></li>
+                  <li><a class="dropdown-item" href="#">Formulir Permohonan dan Keberatan</a></li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#">K3L</a></li>
@@ -300,7 +322,7 @@
 
             <div class="container px-4">
                 <div class="about-banner">
-                  <div class="about-banner-img">👩‍🎓</div>
+                  <div class="about-banner-img"></div>
                   <div class="about-banner-content">
                     <div style="font-size: 13px; font-weight: 600; color: var(--accent); margin-bottom: 12px;">Fakultas Teknik Universitas Riau</div>
                     <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 20px;">Menjadi Fakultas Teknik<br>Yang Unggul Di Bidang Riset Dan Inovasi</h2>
@@ -315,7 +337,7 @@
                 <div class="row g-4">
                   <div class="col-md-3">
                     <div class="custom-card">
-                      <div class="custom-card-img-placeholder text-danger">🌳</div>
+                      <img src="img/berita1.jpg" class="custom-card-img">
                       <div class="p-3">
                         <div class="card-date">01/04/2026</div>
                         <h6 class="card-title-custom">Satu Momen, Berjuta Makna di Lingkungan Fakultas Teknik UNRI</h6>
@@ -324,7 +346,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="custom-card">
-                      <div class="custom-card-img-placeholder text-danger">🤝</div>
+                      <img src="img/berita2.jpg" class="custom-card-img">
                       <div class="p-3">
                         <div class="card-date">14/03/2026</div>
                         <h6 class="card-title-custom">Rapat Kerja Fakultas Teknik Universitas Riau – TA 2027</h6>
@@ -333,7 +355,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="custom-card">
-                      <div class="custom-card-img-placeholder text-danger">🎓</div>
+                      <img src="img/berita3.jpg" class="custom-card-img">
                       <div class="p-3">
                         <div class="card-date">10/03/2026</div>
                         <h6 class="card-title-custom">Fakultas Teknik Universitas Riau Gelar Sharing Session Bersama Alumni Industri, Bahas Program Magang Berdampak</h6>
@@ -342,7 +364,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="custom-card">
-                      <div class="custom-card-img-placeholder text-danger">🏆</div>
+                      <img src="img/berita4.jpg" class="custom-card-img">
                       <div class="p-3">
                         <div class="card-date"> 12/02/2026</div>
                         <h6 class="card-title-custom">Dalam rangka memperingati Bulan K3 Nasional, FT UNRI menyelenggarakan kegiatan pelatihan keselamatan</h6>
@@ -358,7 +380,7 @@
                 <div class="row g-4">
                   <div class="col-md-3">
                     <div class="custom-card">
-                      <div class="p-4 text-center bg-white border-bottom"><i class="bi bi-megaphone fs-1 text-danger"></i></div>
+                      <img src="img/pengumuman1.png" class="custom-card-img">
                       <div class="p-3">
                         <div class="card-date">03/18/2026</div>
                         <h6 class="card-title-custom">Go International! UNRI Informatics Teams Up with Malaysian AI and Visual Informatics Experts to Develop Future Technologies</h6>
@@ -367,7 +389,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="custom-card">
-                      <div class="p-4 text-center bg-white border-bottom"><i class="bi bi-megaphone fs-1 text-danger"></i></div>
+                      <img src="img/pengumuman2.png" class="custom-card-img">
                       <div class="p-3">
                         <div class="card-date">03/07/2026</div>
                         <h6 class="card-title-custom">Jadwal Pelaksanaan Ujian Akhir Semester (UAS) Genap FT UNRI</h6>
@@ -404,7 +426,9 @@
                 <div class="row g-4">
                   <div class="col-md-4">
                     <div class="achieve-card">
-                      <div class="achieve-card-img">👑</div>
+                      <div class="achieve-card-img">
+                        <img src="img/prestasi1.png" alt="Prestasi">
+                        </div>
                       <div class="p-3">
                         <div class="small opacity-75 mb-1">Kartika Natalia Tumangger, Raja Hafiza Ramanda Putra, M Ikram Syafwan dan Tim KKN Laboy Jaya</div>
                         <h6 class="fw-bold mb-0">Juara 1 Perpustakaan Desa Terbaik Tingkat Provinsi Riau</h6>
@@ -413,7 +437,9 @@
                   </div>
                   <div class="col-md-4">
                     <div class="achieve-card">
-                      <div class="achieve-card-img">🌿</div>
+                      <div class="achieve-card-img">
+                        <img src="img/prestasi2.png" alt="Prestasi">
+                        </div>
                       <div class="p-3">
                         <div class="small opacity-75 mb-1">1 orang mahasiswa S1 Teknik Elektro dan 17 orang mahasiswa S1 Teknik Informatika</div>
                         <h6 class="fw-bold mb-0">Sertifikasi Certified International Specialist in Data Engineering</h6>
@@ -422,7 +448,9 @@
                   </div>
                   <div class="col-md-4">
                     <div class="achieve-card">
-                      <div class="achieve-card-img">🏅</div>
+                      <div class="achieve-card-img">
+                        <img src="img/prestasi3.png" alt="Prestasi">
+                        </div>
                       <div class="p-3">
                         <div class="small opacity-75 mb-1">Agus Syuhada, Rayhan Al Farassy, M. Hasfhi Fanny (S1 Teknik Informatika)</div>
                         <h6 class="fw-bold mb-0">Pemenang Microsoft Online Hachathon 2025 - DTS x eleAlte</h6>
